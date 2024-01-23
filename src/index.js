@@ -46,18 +46,61 @@ const pizzaData = [
     },
 ];
 
-
 function App() {
     return (
         <div>
-            <h1>Hello Momy! Betu loves Momy</h1>
+            <Header />
+            <Menu />
+            <Footer />
+        </div>
+    );
+}
+
+function Header() {
+    return <h1 style={{ color: 'red' }}>Fast React Co.</h1>;
+}
+
+function Menu() {
+    return (
+        <div>
+            <h2>Our Menu</h2>
+            <Pizza />
+            <Pizza />
+            <Pizza />
             <Pizza />
         </div>
     );
 }
 
+function Footer() {
+    const hour = new Date().getHours()
+    console.log(hour);
+    const openHour = 10;
+    const closeHour = 22;
+    const isOpen = hour >= openHour && hour <= closeHour;
+    console.log(isOpen);
+
+    // if (hour >= openHour && hour <= closeHour) {
+    //     alert("We are currently open!");
+    // }
+    // else {
+    //     alert("Oops! We are close");
+    // }
+
+    return (
+        <footer>{new Date().toLocaleTimeString()}. We're currently Open</footer>
+    );
+    // return React.createElement('footer', null, "We're currently open!");
+}
+
 function Pizza() {
-    return <h2>Pizza</h2>;
+    return (
+        <div>
+            <img src="pizzas/spinaci.jpg" alt="Pizza spinaci" />
+            <h2>Pizza Spinaci</h2>
+            <p>Tomato, mozarella, spinach, and ricotta cheese</p>
+        </div>
+    );
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
