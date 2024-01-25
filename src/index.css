@@ -57,7 +57,7 @@ body {
   display: block;
   content: '';
   height: 3px;
-  width: 12rem;
+  width: 4rem;
   background-color: #edc84b;
   position: absolute;
   top: calc(50% - 1px);
@@ -168,7 +168,7 @@ body {
   border: none;
   font-size: 1.4rem;
   font-weight: 500;
-  background-color: #edc84b;
+  background-color: #f4be0c;
   padding: 1.4rem 3.2rem;
   cursor: pointer;
   transition: all 0.2s;
